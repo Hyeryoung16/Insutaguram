@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insutaguram</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="container">
+    <h1 class="logo">Insutaguram</h1>
+    <form action="" method="POST" class="loginForm">
+
+      <div class="loginForm__input">
+        <input name="userID" id="userID" type="text" autocomplete="off" required>
+        <label for="userId">아이디</label>
+      </div>
+
+      <div class="loginForm__input">
+        <input name="pwd" id="pwd" type="password" autocomplete="off" required>
+        <label for="userId">비밀번호</label>
+      </div>
+
+      <div class="loginForm__btn">
+        <button id="btn" type="submit">로그인</button>
+      </div>
+    </form>
+    <div class="caption">
+      <a href="">비밀번호를 잊으셨나요?</a>
+    </div>
+  </section>
+
+  <script src="./JS/index.js" defer></script>
+</body>
+</html>
