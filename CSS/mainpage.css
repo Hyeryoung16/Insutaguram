@@ -1,7 +1,17 @@
 
 /*----------Temporary----------------*/
-.container{
-    background-color: antiquewhite;
+.container .container__contents{
+    background-color: rgb(0,0,0,0.5);
+    margin-right : 30px;
+}
+
+.container .container__side .side__stories{
+    background-color: rgb(0,0,0,0.5);
+    padding : 10px 0;
+}
+
+.container .container__side .side__profile{
+    width : 200px;
 }
 
 /*-----------------------------------*/
@@ -81,3 +91,94 @@ i {
     margin : 10px;
 }
 
+/* Container */
+.container{
+    display: flex; 
+    justify-content: center;
+}
+
+/* Container__contents */
+.container__contents{
+    padding : 10px;
+}
+
+.content{
+    display : flex;
+    flex-direction: column;
+    width : 400px;
+}
+
+.content__header{
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+    padding : 0 10px;
+    margin-bottom: 10px;
+}
+
+.content__header .profile,
+.content__header .about,
+.side__profile .profile,
+.side__stories .stories .story{
+    display : flex;
+    align-items: center;
+    font-weight: var(--weight-semi-bold);
+    color : var(--color-light-white);
+}
+
+.profile .image{
+    width : 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.content__imgs img{
+    width : 100%;
+}
+
+/* Container__side */
+.container__side{
+    padding : 10px;
+}
+
+.container__side .side__profile,
+.container__side .side__stories .stories .story{
+    padding : 0 10px;
+    margin-bottom: 10px;
+}
+
+.side__profile .profile .id__name,
+.side__stories .stories .id__name{
+    margin-top : 3px;
+    font-size: 10px;
+    color : var(--color-dark-white);
+}
+
+.side__stories .title{
+    display : flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding : 0 10px;
+    margin-bottom: 10px;
+}
+
+.side__stories .title button{
+    font-size: 12px;
+}
+
+.side__stories .stories {
+    overflow:auto; 
+    height:100px;
+}
+
+.side__stories .stories .story .image{
+    width : 40px;
+    padding : 2px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: solid 3px var(--color-light-white); 
+}
+
+.side__stories .stories .notread .image{
+    border: solid 3px rgb(112, 1, 103); 
+}
