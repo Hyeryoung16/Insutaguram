@@ -1,27 +1,15 @@
-
-/*----------Temporary----------------*/
-.container .container__contents{
-    background-color: rgb(0,0,0,0.5);
-    margin-right : 30px;
+:root{
+    --mainpage-font-color : #2d3436;
+    --mainpage-back-ground-color : #ffb142;
+    --mainpage-section-color : rgba(204, 142, 53,1.0);
+    --mainpage-section-border-color : #2d3436;
 }
 
-.container .container__side .side__stories{
-    background-color: rgb(0,0,0,0.5);
-    padding : 10px 0;
+body {
+    margin: 0;
+    cursor: defualt;
+    background-color: var(--mainpage-back-ground-color);
 }
-
-.container .container__side .side__profile{
-    width : 200px;
-}
-
-/*-----------------------------------*/
-
-i {
-    font-size: 30px;
-    line-height: 30px;
-    color : var(--color-light-white);
-}
-
 
 /* Header */
 .header{
@@ -31,21 +19,19 @@ i {
     margin-bottom : 30px;
 }
 
-.header__logo,
-.header__search{
+.header__logo{
     height : 30px;
     width : 250px;
     display : flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin : 10px;
 }
 
-.header__logo .line{
-    content : "";
-    height : 30px;
-    width : 1px;
-    background-color: var(--color-light-white);
+.header__logo i{
+    font-size: 30px;
+    line-height: 30px;
+    color : var(--mainpage-font-color);
 }
 
 .header__logo h3{
@@ -53,11 +39,17 @@ i {
     font-size: 30px;
     line-height: 30px;
     font-weight: var(--weight-semi-bold);
-    color : var(--color-light-white);
+    color : var(--mainpage-font-color);
 }
 
 .header__search{
     position : relative;
+    height : 30px;
+    width : 250px;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    margin : 10px;
 }
 
 .search-form,
@@ -69,7 +61,7 @@ i {
 .search-form input {
     background-color: transparent;
     border: none;
-    border-bottom: solid 1px var(--color-light-white); 
+    border-bottom: solid 1px var(--mainpage-font-color); 
     outline : none;
 }
 
@@ -78,9 +70,8 @@ i {
     top : 0; left : 0; bottom: 0; right: 0;
     text-align: center;
     line-height: 30px;
-    color : var(--color-light-white);
+    color : var(--mainpage-font-color);
 }
-
 
 .header__nav{
     height : 30px;
@@ -91,39 +82,93 @@ i {
     margin : 10px;
 }
 
-/* Container */
+.header__nav i {
+    font-size: 20px;
+    line-height: 20px;
+    color : var(--mainpage-font-color);
+}
+
+
+/* container */
 .container{
     display: flex; 
     justify-content: center;
 }
 
-/* Container__contents */
+/* container__contents */
 .container__contents{
+    padding : 10px;
+    width : 600px;
+}
+
+/* stories */
+.stories{
+    width: 100%;
+    overflow:auto;
+    display: flex;
+    padding :5px 10px;
+    margin-bottom: 20px;
+    background-color: var(--mainpage-section-color);
+    border-radius: var(--size-border-radius);
+    border : solid 1px var(--mainpage-section-border-color);
+}
+
+.stories .story{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: var(--weight-semi-bold);
+    font-size: 10px;
+    color : var(--mainpage-font-color);
     padding : 10px;
 }
 
+.stories .story .image{
+    width : 60px;
+    padding : 2px;
+    border-radius: 50%;
+    border: solid 2px var(--color-dark-white); 
+}
+
+.stories .notread .image{
+    border: solid 3px rgb(112, 1, 103); 
+}
+
+.stories .story .userid{
+    padding-top : 3px;
+}
+
+
+/*contents*/
+.contensts{
+    display : flex;
+    flex-direction: column;
+}
+
+/*content*/
 .content{
     display : flex;
     flex-direction: column;
-    width : 400px;
+    width : 100%;
+    margin-bottom: 20px;
+    background-color: var(--mainpage-section-color);
+    color : var(--mainpage-font-color);
+    border-radius: var(--size-border-radius);
+    border : solid 1px var(--mainpage-section-border-color);
 }
 
 .content__header{
     width : 100%;
     display: flex;
     justify-content: space-between;
-    padding : 0 10px;
-    margin-bottom: 10px;
+    padding : 10px;
 }
 
 .content__header .profile,
-.content__header .about,
-.side__profile .profile,
-.side__stories .stories .story{
+.content__header .about{
     display : flex;
     align-items: center;
     font-weight: var(--weight-semi-bold);
-    color : var(--color-light-white);
 }
 
 .profile .image{
@@ -136,49 +181,70 @@ i {
     width : 100%;
 }
 
-/* Container__side */
-.container__side{
+.content__icons {
+    display : flex;
+    justify-content: space-between;
     padding : 10px;
 }
 
-.container__side .side__profile,
-.container__side .side__stories .stories .story{
-    padding : 0 10px;
-    margin-bottom: 10px;
+.content__icons .icons__leftside i,
+.content__icons .icons__rightside i{
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 10px;
+    padding : 0 5px;
 }
 
-.side__profile .profile .id__name,
-.side__stories .stories .id__name{
+.content__description{
+    padding : 10px;
+}
+
+.content__description .userid{
+    font-weight: var(--weight-semi-bold);
+}
+
+.content__description .description{
+    font-size : 13px;
+}
+
+.content__comments{
+    padding : 10px;
+    display : flex;
+    flex-direction: column;
+}
+
+.content__comments .comment .userid{
+    font-weight: var(--weight-semi-bold);
+}
+
+.content__comments .comment .description{
+    font-size: 13px;
+}
+
+/* container__rightside */
+.container__rightside{
+    padding : 10px;
+}
+
+.container__rightside .profile{
+    width : 200px;
+    padding : 10px;
+    display: flex;
+}
+
+.container__rightside .profile .image {
+    width : 60px;
+}
+
+.container__rightside .profile .userid{
+    color : var(--mainpage-font-color);
+    font-weight: var(--weight-semi-bold);
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container__rightside .profile .userid .username{
     margin-top : 3px;
     font-size: 10px;
-    color : var(--color-dark-white);
-}
-
-.side__stories .title{
-    display : flex;
-    justify-content: space-between;
-    font-size: 12px;
-    padding : 0 10px;
-    margin-bottom: 10px;
-}
-
-.side__stories .title button{
-    font-size: 12px;
-}
-
-.side__stories .stories {
-    overflow:auto; 
-    height:100px;
-}
-
-.side__stories .stories .story .image{
-    width : 40px;
-    padding : 2px;
-    border-radius: 50%;
-    margin-right: 20px;
-    border: solid 3px var(--color-light-white); 
-}
-
-.side__stories .stories .notread .image{
-    border: solid 3px rgb(112, 1, 103); 
 }
