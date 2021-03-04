@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    cursor: defualt;
+    background-color: var(--mainpage-back-ground-color);
+}
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    padding : 20px 30px;
+    margin-bottom : 30px;
+}
+
+.header__logo{
+    height : 30px;
+    width : 250px;
+    display : flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin : 10px;
+}
+
+.header__logo i{
+    font-size: 30px;
+    line-height: 30px;
+    color : var(--mainpage-font-color);
+}
+
+.header__logo h3{
+    margin : 0;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: var(--weight-semi-bold);
+    color : var(--mainpage-font-color);
+}
+
+.header__search{
+    position : relative;
+    height : 30px;
+    width : 250px;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    margin : 10px;
+}
+
+.search-form,
+.search-form input{
+    width : 100%;
+    height : 100%;
+}
+
+.search-form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px var(--mainpage-font-color); 
+    outline : none;
+}
+
+.search-form label {
+    position : absolute;
+    top : 0; left : 0; bottom: 0; right: 0;
+    text-align: center;
+    line-height: 30px;
+    color : var(--mainpage-font-color);
+}
+
+.header__nav{
+    height : 30px;
+    width : 250px;
+    display : flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin : 10px;
+}
+
+.header__nav i {
+    font-size: 20px;
+    line-height: 20px;
+    color : var(--mainpage-font-color);
+}
+
+
+/* container */
+.container{
+    display: flex; 
+    justify-content: center;
+}
+
+/* container__contents */
+.container__contents{
+    padding : 10px;
+    width : 600px;
+}
+
+/* stories */
+.stories{
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    padding :5px 10px;
+    margin-bottom: 20px;
+    background-color: var(--mainpage-section-color);
+    border-radius: var(--size-border-radius);
+    border : solid 1px var(--mainpage-section-border-color);
+}
+
+.stories .story{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: var(--weight-semi-bold);
+    font-size: 10px;
+    color : var(--mainpage-font-color);
+    padding : 10px;
+}
+
+.stories .story .image{
+    width : 60px;
+    padding : 2px;
+    border-radius: 50%;
+    border: solid 2px var(--color-dark-white); 
+}
+
+.stories .notread .image{
+    border: solid 3px rgb(112, 1, 103); 
+}
+
+.stories .story .userid{
+    padding-top : 3px;
+}
+
+
+/*contents*/
+.contensts{
+    display : flex;
+    flex-direction: column;
+}
+
+/*content*/
+.content{
+    display : flex;
+    flex-direction: column;
+    width : 100%;
+    margin-bottom: 20px;
+    background-color: var(--mainpage-section-color);
+    color : var(--mainpage-font-color);
+    border-radius: var(--size-border-radius);
+    border : solid 1px var(--mainpage-section-border-color);
+}
+
+.content__header{
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+    padding : 10px;
+}
+
+.content__header .profile,
+.content__header .about{
+    display : flex;
+    align-items: center;
+    font-weight: var(--weight-semi-bold);
+}
+
+.profile .image{
+    width : 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.content__imgs img{
+    width : 100%;
+}
+
+.content__icons {
+    display : flex;
+    justify-content: space-between;
+    padding : 10px;
+}
+
+.content__icons .icons__leftside i,
+.content__icons .icons__rightside i{
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 10px;
+    padding : 0 5px;
+}
+
+.content__description{
+    padding : 10px;
+}
+
+.content__description .userid{
+    font-weight: var(--weight-semi-bold);
+}
+
+.content__description .description{
+    font-size : 13px;
+}
+
+.content__comments{
+    padding : 10px;
+    display : flex;
+    flex-direction: column;
+}
+
+.content__comments .comment .userid{
+    font-weight: var(--weight-semi-bold);
+}
+
+.content__comments .comment .description{
+    font-size: 13px;
+}
+
+/* container__rightside */
+.container__rightside{
+    padding : 10px;
+}
+
+.container__rightside .profile{
+    width : 200px;
+    padding : 10px;
+    display: flex;
+}
+
+.container__rightside .profile .image {
+    width : 60px;
+}
+
+.container__rightside .profile .userid{
+    color : var(--mainpage-font-color);
+    font-weight: var(--weight-semi-bold);
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container__rightside .profile .userid .username{
+    margin-top : 3px;
+    font-size: 10px;
+}
